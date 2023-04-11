@@ -1,6 +1,6 @@
 # Simple Todo List Project
 
-![0%](https://progress-bar.dev/0/?title=Done)
+![20%](https://progress-bar.dev/20/?title=Done)
 
 This is a simple todo list project built using HTML, CSS, and JavaScript. The project allows you to add and remove tasks from a list of todos.
 
