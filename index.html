@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
     <title>Todo List</title>
+    <link rel="icon" href="./logo.png" type="image/png">
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="./master.css">
 </head>
 <body>
     <header>
+        <img src="./logo.png" alt="My Logo" width="30" height="30">
         <h1>To Do</h1>
     </header>
+    <main>
+        <div class="form">
+            <input type="text" placeholder="Enter Task" class="input"/>
+            <input type="submit" class="add" value="Add Task"/>
+        </div>
+        <div class="tasks"></div>
+    </main>
     <footer>
         <p>© 2023 Todo List Project</p>
     </footer>
