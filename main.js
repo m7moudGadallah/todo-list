@@ -1,5 +1,7 @@
 //reload page when click on header
 document.querySelector("header h1").addEventListener('click', _=> location.reload());
+//reload page when click on logo
+document.querySelector("header img").addEventListener('click', _=> location.reload());
 
 /**
  * @breif readTask - read task from input field
