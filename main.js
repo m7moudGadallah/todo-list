@@ -43,9 +43,17 @@ const createTask = taskName => {
 const fillTasksDiv = taskList => {
     let tasksDiv = document.querySelector(".tasks");
 
-    taskList.forEach(taskName => {
-        tasksDiv.appendChild(createTask(taskName));
-    });
+    if (taskList.length < 1) {
+        const msg = document.createElement('p');
+        msg.textContent = 'No tasks available';
+        msg.style.color = 'gray';
+        tasksDiv.appendChild(msg);
+    }
+    else {
+        taskList.forEach(taskName => {
+            tasksDiv.appendChild(createTask(taskName));
+        });
+    }
 }
 
 /**
@@ -89,7 +97,28 @@ document.querySelector(".input").addEventListener('keydown', e => {
     addTask();
 });
 
+/**
+ * @breif deleteTask - used to delete task and update div
+ * @param {String} taskName 
+ */
+const deleteTask = taskName => {
+    const taskList = JSON.parse(localStorage.getItem('taskList')) || [];
+    const updatedTaskList = taskList.filter(task => task !== taskName);
+    localStorage.setItem('taskList', JSON.stringify(updatedTaskList));
+    updateTasksDiv(updatedTaskList);
+}
 
+// delete task event 
+document.querySelector(".tasks").addEventListener('click', e => {
+    if (e.target.classList.contains('delete-task')) {
+        //get task name
+        const taskName = e.target.previousElementSibling.textContent;
+        //delete task
+        deleteTask(taskName);
+
+        console.log(taskName);
+    }
+});
 
 onload = () => {
     document.querySelector(".input").focus();
@@ -97,11 +126,7 @@ onload = () => {
     //retrive taskList from localStorage
     const taskList = JSON.parse(localStorage.getItem('taskList')) || [];
 
-    if (taskList) {
-        updateTasksDiv(taskList)
-        console.table(taskList);
-    }
-    else {
-        localStorage.setItem('taskList', JSON.stringify(taskList));
-    }
+    updateTasksDiv(taskList);
+    console.table(taskList);
+    localStorage.setItem('taskList', JSON.stringify(taskList));
 };
