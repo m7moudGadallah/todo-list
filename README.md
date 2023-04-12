@@ -6,7 +6,7 @@ This is a simple todo list project built using HTML, CSS, and JavaScript. The pr
 
 ## Getting Started
 
-To get started with the project, simply download or clone the project files from the [GitHub repository](https://github.com/m7moudGadallah/todo-list). You can then open the [index.html](./index.html) file in your web browser to view the project.
+To get started with the project, simply download or clone the project files from the [GitHub repository](https://github.com/m7moudGadallah/todo-list). You can then open the [index.html](./index.html) file in your web browser to view the project.or can view live demo from [here](https://m7moudgadallah.github.io/todo-list/)
 
 ## Usage
 
