@@ -79,12 +79,38 @@ const updateTasksDiv = taskList => {
  */
 const addTask = _ => {
     let taskName = readTaskName();
+    let inputError = document.getElementById('task-input-error');
+
+    //hide error span if not
+    if (inputError.classList.contains('error')) {
+        inputError.classList.remove('error');
+        inputError.style.display = "none";
+    }
+
+    //validate empty input
+    if (taskName === '') {
+        inputError.textContent = 'Empty input';
+        inputError.classList.add("error");
+        inputError.style.display = "inline-block";
+        return;
+    }
+
     const taskList = JSON.parse(localStorage.getItem('taskList')) || [];
+    
+    //validate that task is not exist
+    if (taskList.includes(taskName)) {
+        inputError.textContent = "Task is already exists!";
+        inputError.classList.add("error");
+        inputError.style.display = "inline-block";
+        
+        return;
+    }
+
     taskList.unshift(taskName);
     localStorage.setItem('taskList', JSON.stringify(taskList));
     updateTasksDiv(taskList);
-    console.log(taskName);
-    console.table(taskList);
+    // console.log(taskName);
+    // console.table(taskList);
 }
 
 //add task event with using add button
