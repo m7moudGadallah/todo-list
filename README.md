@@ -1,12 +1,12 @@
 # Simple Todo List Project
 
-![70%](https://progress-bar.dev/70/?title=Done)
+![100%](https://progress-bar.dev/100/?title=Done)
 
 This is a simple todo list project built using HTML, CSS, and JavaScript. The project allows you to add and remove tasks from a list of todos.
 
 ## Getting Started
 
-To get started with the project, simply download or clone the project files from the [GitHub repository](https://github.com/m7moudGadallah/todo-list). You can then open the [index.html](./index.html) file in your web browser to view the project.
+To get started with the project, simply download or clone the project files from the [GitHub repository](https://github.com/m7moudGadallah/todo-list). You can then open the [index.html](./index.html) file in your web browser to view the project.or can view live demo from [here](https://m7moudgadallah.github.io/todo-list/)
 
 ## Usage
 
