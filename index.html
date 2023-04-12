@@ -13,8 +13,13 @@
     </header>
     <main>
         <div class="form">
-            <input type="text" placeholder="Enter Task" class="input"/>
-            <input type="submit" class="add" value="Add Task"/>
+            <div class="inp">
+                <input type="text" placeholder="Enter Task" class="input"/>
+                <input type="submit" class="add" value="Add Task"/>
+            </div>
+            <div class="input-error">
+                <span id="task-input-error" class="error-message">Task is already exists!</span>
+            </div>
         </div>
         <div class="tasks"></div>
     </main>

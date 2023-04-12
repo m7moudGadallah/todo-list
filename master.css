@@ -68,13 +68,18 @@ main {
 
 .form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 20px;
     width: fit-content;
+}
+
+.inp {
+    display: flex;
+    flex-direction: row;
 }
 
 .input {
@@ -99,6 +104,13 @@ main {
 
 .add:hover {
     background-color: #222;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 15px;
+    display: none; /* Hide the error message by default */
 }
 
 /* Style tasks div */
