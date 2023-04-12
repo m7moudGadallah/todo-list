@@ -8,14 +8,14 @@ document.querySelector("header img").addEventListener('click', _=> location.relo
  * @returns {String} Task
  */
 const readTaskName = _ => {
-    let task = document.querySelector(".input").value;
+    let taskName = document.querySelector(".input").value.trim();
 
     //clear input field
     document.querySelector(".input").value = "";
 
     document.querySelector(".input").focus();
 
-    return task;
+    return taskName;
 };
 
 /**
